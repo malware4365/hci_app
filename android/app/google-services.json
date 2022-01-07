@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "53192474995",
+    "project_id": "hci-chat-53a0f",
+    "storage_bucket": "hci-chat-53a0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53192474995:android:f4a786385c6f105ca9c506",
+        "android_client_info": {
+          "package_name": "com.example.hci_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53192474995-5hobtb604o7cb3vsefnfrre85glei438.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQJ7NtEBL8iBvRjU-tazJ4wBWsfM1ycBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53192474995-5hobtb604o7cb3vsefnfrre85glei438.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
