@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
 //Packages
@@ -29,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3)).then(
+    Future.delayed(Duration(seconds: 1)).then(
       (_) {
         _setup().then(
           (_) => widget.onInitializationComplete(),
@@ -41,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HCI chat',
+      title: 'Chatify',
       theme: ThemeData(
         backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
         scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),

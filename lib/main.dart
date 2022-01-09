@@ -13,8 +13,8 @@ import './providers/authentication_provider.dart';
 //Pages
 import './pages/splash_page.dart';
 import './pages/login_page.dart';
-import './pages/home_page.dart';
 import './pages/register_page.dart';
+import './pages/home_page.dart';
 
 void main() {
   runApp(
@@ -41,7 +41,7 @@ class MainApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'HCI_app',
+
         theme: ThemeData(
           backgroundColor: Color.fromRGBO(36, 35, 49, 1.0),
           scaffoldBackgroundColor: Color.fromRGBO(36, 35, 49, 1.0),

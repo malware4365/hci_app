@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 //Packages
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -58,11 +57,11 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             _pageTitle(),
             SizedBox(
-              height: _deviceHeight * 0.02,
+              height: _deviceHeight * 0.04,
             ),
             _loginForm(),
             SizedBox(
-              height: _deviceHeight * 0.04,
+              height: _deviceHeight * 0.05,
             ),
             _loginButton(),
             SizedBox(
@@ -77,9 +76,9 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _pageTitle() {
     return Container(
-      height: _deviceHeight * 0.07,
+      height: _deviceHeight * 0.10,
       child: Text(
-        'HCI app',
+        'HCI_APP_CHAT',
         style: TextStyle(
           color: Colors.white,
           fontSize: 40,
@@ -91,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _loginForm() {
     return Container(
-      height: _deviceHeight * 0.24,
+      height: _deviceHeight * 0.18,
       child: Form(
         key: _loginFormKey,
         child: Column(
@@ -106,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                   });
                 },
                 regEx:
-                    r"^[a-zA-Z0-9.a-zA-Z0-9/!#$%&'*+-/?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+                    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
                 hintText: "Email",
                 obscureText: false),
             CustomTextFormField(
@@ -127,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _loginButton() {
     return RoundedButton(
       name: "Login",
-      height: _deviceHeight * 0.07,
+      height: _deviceHeight * 0.065,
       width: _deviceWidth * 0.65,
       onPressed: () {
         if (_loginFormKey.currentState!.validate()) {

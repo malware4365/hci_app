@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -22,16 +20,14 @@ class RoundedButton extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(height * 0.25),
-        color: Color.fromRGBO(0, 80, 210, 1.0),
+        color: Color.fromRGBO(0, 82, 218, 1.0),
       ),
       child: TextButton(
         onPressed: () => onPressed(),
-        child: Text(name,
-            style: TextStyle(
-              fontSize: 22,
-              color: Colors.white,
-              height: 1.5,
-            )),
+        child: Text(
+          name,
+          style: TextStyle(fontSize: 22, color: Colors.white, height: 1.5),
+        ),
       ),
     );
   }

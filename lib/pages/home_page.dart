@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
     ChatsPage(),
     UsersPage(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return _buildUI();
@@ -37,13 +38,13 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             label: "Chats",
             icon: Icon(
-              Icons.chat_bubble,
+              Icons.chat_bubble_sharp,
             ),
           ),
           BottomNavigationBarItem(
             label: "Users",
             icon: Icon(
-              Icons.supervisor_account_sharp,
+              Icons.supervised_user_circle_sharp,
             ),
           ),
         ],

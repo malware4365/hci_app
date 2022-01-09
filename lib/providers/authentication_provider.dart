@@ -1,8 +1,8 @@
-//Pckages
+//Packages
+import 'package:hci_app/models/chat_user.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
-import 'package:hci_app/models/chat_user.dart';
 
 //Services
 import '../services/database_service.dart';
@@ -22,6 +22,7 @@ class AuthenticationProvider extends ChangeNotifier {
     _auth = FirebaseAuth.instance;
     _navigationService = GetIt.instance.get<NavigationService>();
     _databaseService = GetIt.instance.get<DatabaseService>();
+
     _auth.authStateChanges().listen((_user) {
       if (_user != null) {
         _databaseService.updateUserLastSeenTime(_user.uid);
@@ -42,7 +43,9 @@ class AuthenticationProvider extends ChangeNotifier {
           },
         );
       } else {
-        _navigationService.removeAndNavigateToRoute('/login');
+        if (_navigationService.getCurrentRoute() != '/login') {
+          _navigationService.removeAndNavigateToRoute('/login');
+        }
       }
     });
   }
@@ -59,14 +62,14 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
-  Future<String?> registerUserUsingEmailAndPasswod(
+  Future<String?> registerUserUsingEmailAndPassword(
       String _email, String _password) async {
     try {
       UserCredential _credentials = await _auth.createUserWithEmailAndPassword(
           email: _email, password: _password);
       return _credentials.user!.uid;
     } on FirebaseAuthException {
-      print("Error registering User.");
+      print("Error registering user.");
     } catch (e) {
       print(e);
     }

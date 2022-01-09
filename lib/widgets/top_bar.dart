@@ -13,7 +13,7 @@ class TopBar extends StatelessWidget {
     this._barTitle, {
     this.primaryAction,
     this.secondaryAction,
-    this.fontSize = 30,
+    this.fontSize = 35,
   });
 
   @override
