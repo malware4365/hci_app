@@ -69,15 +69,15 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             _profileImageField(),
             SizedBox(
-              height: _deviceHeight * 0.05,
+              height: _deviceHeight * 0.02,
             ),
             _registerForm(),
             SizedBox(
-              height: _deviceHeight * 0.05,
+              height: _deviceHeight * 0.03,
             ),
             _registerButton(),
             SizedBox(
-              height: _deviceHeight * 0.02,
+              height: _deviceHeight * 0.25,
             ),
           ],
         ),
@@ -103,7 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
           return RoundedImageFile(
             key: UniqueKey(),
             image: _profileImage!,
-            size: _deviceHeight * 0.20,
+            size: _deviceHeight * 0.15,
           );
         } else {
           return RoundedImageNetwork(
@@ -118,7 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget _registerForm() {
     return Container(
-      height: _deviceHeight * 0.35,
+      height: _deviceHeight * 0.36,
       child: Form(
         key: _registerFormKey,
         child: Column(
@@ -163,7 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget _registerButton() {
     return RoundedButton(
       name: "Register",
-      height: _deviceHeight * 0.065,
+      height: _deviceHeight * 0.07,
       width: _deviceWidth * 0.65,
       onPressed: () async {
         if (_registerFormKey.currentState!.validate() &&

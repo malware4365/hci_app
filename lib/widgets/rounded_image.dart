@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:io'; //I had to import this to work the ImageFile on class RoundedImageFile
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 

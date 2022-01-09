@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             _pageTitle(),
             SizedBox(
-              height: _deviceHeight * 0.04,
+              height: _deviceHeight * 0.05,
             ),
             _loginForm(),
             SizedBox(
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             _loginButton(),
             SizedBox(
-              height: _deviceHeight * 0.02,
+              height: _deviceHeight * 0.03,
             ),
             _registerAccountLink(),
           ],
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _pageTitle() {
     return Container(
-      height: _deviceHeight * 0.10,
+      height: _deviceHeight * 0.06,
       child: Text(
         'HCI_APP_CHAT',
         style: TextStyle(
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _loginForm() {
     return Container(
-      height: _deviceHeight * 0.18,
+      height: _deviceHeight * 0.19,
       child: Form(
         key: _loginFormKey,
         child: Column(
@@ -108,6 +108,9 @@ class _LoginPageState extends State<LoginPage> {
                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
                 hintText: "Email",
                 obscureText: false),
+                SizedBox(
+              height: _deviceHeight * 0.01,
+            ),
             CustomTextFormField(
                 onSaved: (_value) {
                   setState(() {
@@ -126,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _loginButton() {
     return RoundedButton(
       name: "Login",
-      height: _deviceHeight * 0.065,
+      height: _deviceHeight * 0.075,
       width: _deviceWidth * 0.65,
       onPressed: () {
         if (_loginFormKey.currentState!.validate()) {
