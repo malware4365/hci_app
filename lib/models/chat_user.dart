@@ -33,7 +33,7 @@ class ChatUser {
   }
 
   String lastDayActive() {
-    return "${lastActive.month}/${lastActive.day}/${lastActive.year}";
+    return "${lastActive.day}/${lastActive.month}/${lastActive.year}";
   }
 
   bool wasRecentlyActive() {
