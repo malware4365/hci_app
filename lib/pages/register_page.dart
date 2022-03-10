@@ -108,7 +108,7 @@ class _RegisterPageState extends State<RegisterPage> {
         } else {
           return RoundedImageNetwork(
             key: UniqueKey(),
-            imagePath: "https://i.pravatar.cc/150?img=65",
+            imagePath: "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
             size: _deviceHeight * 0.15,
           );
         }
