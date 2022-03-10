@@ -79,7 +79,7 @@ class _ChatPageState extends State<ChatPage> {
                 children: [
                   TopBar(
                     this.widget.chat.title(),
-                    fontSize: 10,
+                    fontSize: 16,
                     primaryAction: IconButton(
                       icon: Icon(
                         Icons.delete,
