@@ -69,15 +69,15 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             _profileImageField(),
             SizedBox(
-              height: _deviceHeight * 0.02,
+              height: _deviceHeight * 0.01,
             ),
             _registerForm(),
             SizedBox(
-              height: _deviceHeight * 0.03,
+              height: _deviceHeight * 0.01,
             ),
             _registerButton(),
             SizedBox(
-              height: _deviceHeight * 0.25,
+              height: _deviceHeight * 0.28,
             ),
           ],
         ),
